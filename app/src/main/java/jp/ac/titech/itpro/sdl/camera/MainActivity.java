@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int reqCode, int resCode, Intent data) {
         super.onActivityResult(reqCode, resCode, data);
-        if (reqCode != REQ_PHOTO && resCode != RESULT_OK) {
+        if (reqCode == REQ_PHOTO && resCode != RESULT_OK) {
             currentPhotoFile = null;
         }
     }
